@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="bs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMStream PRO | Legalna Globalna TV Usluga - Besplatan Test & PDF Garancija</title>
+    <meta name="description" content="DMStream PRO nudi legalne TV usluge širom svijeta. Preko 7.200+ TV kanala i 105.000+ filmova i serija u 4K Ultra HD. Provjerite dostupnost u Vašem gradu i ostvarite 50% popusta!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Ikone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#070a12',
+                            card: 'rgba(15, 23, 42, 0.82)',
+                            rose: '#f43f5e',
+                            roseDark: '#e11d48',
+                            cyan: '#06b6d4',
+                            indigo: '#6366f1',
+                            gold: '#f59e0b',
+                            emerald: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #070a12;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(244, 63, 94, 0.4);
+            box-shadow: 0 15px 35px -10px rgba(244, 63, 94, 0.25);
+        }
+
+        .glow-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(140px);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.28;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 40%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.08); }
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent, rgba(255,255,255,0.28), transparent);
+            transform: rotate(30deg);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translate(-100%, -100%) rotate(30deg); }
+            100% { transform: translate(100%, 100%) rotate(30deg); }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+
+    <!-- STICKY URGENCY BAR -->
+    <div class="bg-gradient-to-r from-rose-950 via-slate-900 to-indigo-950 border-b border-rose-500/30 text-white text-xs sm:text-sm py-2 px-4 text-center font-semibold sticky top-0 z-50 shadow-xl flex justify-center items-center gap-2">
+        <span class="bg-rose-600 text-white text-[10px] uppercase font-extrabold px-2.5 py-0.5 rounded-full animate-pulse shadow-sm">EKSKLUZIVNO</span>
+        <span>🔥 50% POPUSTA + GRATIS TEST! Ponuda važi još:</span>
+        <span id="countdownTimer" class="font-mono text-amber-300 font-black bg-black/50 px-2.5 py-0.5 rounded border border-amber-500/40 tracking-wider">03:45:12</span>
+    </div>
+
+    <!-- BACKGROUND GLOW EFEKTI -->
+    <div class="glow-sphere w-[500px] h-[500px] bg-rose-600 top-10 left-1/2 -translate-x-1/2 animate-pulse-glow"></div>
+    <div class="glow-sphere w-[450px] h-[450px] bg-cyan-600 top-[850px] right-0"></div>
+    <div class="glow-sphere w-[400px] h-[400px] bg-indigo-600 top-[1800px] left-0"></div>
+
+    <!-- GLAVNI LOGO NA SAMOM VRHU (VELIK I CENTRIRAN) -->
+    <header class="pt-8 pb-4 text-center relative z-10 px-4">
+        <a href="#" class="inline-block transform transition hover:scale-105 duration-300">
+            <img src="dmstreamlogo.PNG" alt="DMStream PRO Službeni Logo" class="max-w-[340px] sm:max-w-[420px] w-full h-auto drop-shadow-[0_10px_30px_rgba(244,63,94,0.35)] mx-auto" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';">
+            <div id="logoFallback" class="hidden text-4xl sm:text-5xl font-black tracking-tight text-white">
+                DMStream <span class="text-rose-500">PRO</span>
+            </div>
+        </a>
+    </header>
+
+    <!-- HERO SEKCIJA -->
+    <section class="max-w-5xl mx-auto px-4 pt-2 pb-10 text-center relative z-10">
+        <!-- Bedževi povjerenja -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
+            <span class="bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-shield-check"></i> 100% Legalna Usluga
+            </span>
+            <span class="bg-cyan-500/15 border border-cyan-500/40 text-cyan-400 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-globe"></i> Globalna Pokrivenost
+            </span>
+            <span class="bg-amber-500/15 border border-amber-500/40 text-amber-400 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-file-pdf"></i> Pismena PDF Garancija
+            </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4 text-gradient">
+            Gledajte Omiljene TV Kanale, Filmove i Serije Bilo Gdje u Svijetu
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto mb-8 font-normal leading-relaxed">
+            Legalna TV platforma sa <strong class="text-white">7.200+ uživo kanala</strong> i preko <strong class="text-white">105.000+ filmova i serija</strong>. Uz svaku narudžbu dobijate zvaničnu <span class="text-amber-400 font-semibold">PDF garanciju sa datumom kupovine</span> i pravo na <span class="text-emerald-400 font-semibold">100% povrat novca</span>.
+        </p>
+
+        <!-- PROVJERAVAČ DOSTUPNOSTI PO GRADU -->
+        <div class="max-w-2xl mx-auto glass-card rounded-3xl p-6 sm:p-8 border border-rose-500/30 shadow-[0_20px_50px_rgba(244,63,94,0.2)] relative overflow-hidden my-6">
+            
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-rose-600/20 rounded-full blur-2xl"></div>
+
+            <div class="flex items-center justify-center gap-2 text-rose-400 font-bold text-xs uppercase tracking-widest mb-2">
+                <i class="fa-solid fa-satellite-dish animate-pulse"></i> Mrežna Provjera Uživo
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2">
+                Provjerite Dostupnost DMStream PRO Mreže U Vašem Gradu
+            </h3>
+            <p class="text-slate-400 text-sm mb-6">
+                Ukucajte ime Vašeg grada za trenutnu provjeru brzine servera i ostvarivanje popusta.
+            </p>
+
+            <!-- FORMA ZA UNOS GRADA -->
+            <div id="checkForm" class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-1">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <input type="text" id="cityInput" placeholder="Unesite Vaš grad (npr. Sarajevo, Zagreb, Beč...)" class="w-full pl-11 pr-4 py-3.5 bg-slate-900/90 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/40 text-sm font-medium transition">
+                </div>
+                <button onclick="startCityCheck()" class="shimmer-btn bg-gradient-to-r from-rose-600 via-rose-500 to-indigo-600 hover:from-rose-500 hover:to-indigo-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fa-solid fa-magnifying-glass font-bold"></i> Provjeri Dostupnost
+                </button>
+            </div>
+
+            <!-- PROGRES ANIMACIJA SKENIRANJA (SKRIVENA NA POČETKU) -->
+            <div id="scanningBox" class="hidden py-6">
+                <div class="flex justify-between items-center mb-2 text-xs font-bold">
+                    <span id="scanStatusText" class="text-rose-400 font-mono animate-pulse">Inicijalizacija mreže...</span>
+                    <span id="progressPercent" class="text-cyan-400 font-mono">0%</span>
+                </div>
+                <div class="w-full bg-slate-900 rounded-full h-3 overflow-hidden border border-slate-700 p-0.5">
+                    <div id="progressFill" class="bg-gradient-to-r from-rose-500 via-indigo-500 to-emerald-400 h-full rounded-full transition-all duration-150" style="width: 0%"></div>
+                </div>
+                <p class="text-xs text-slate-400 mt-3 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-spinner fa-spin text-rose-400"></i> Molimo sačekajte par sekundi, povezujemo se sa najbližim DMStream PRO čvorištem...
+                </p>
+            </div>
+
+            <!-- REZULTAT PROVJERE (SKRIVEN NA POČETKU) -->
+            <div id="resultBox" class="hidden py-4 text-center">
+                <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded-full flex items-center justify-center mx-auto text-3xl mb-3 shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-bounce">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h4 class="text-xl sm:text-2xl font-black text-emerald-400 uppercase tracking-tight mb-2">
+                    ČESTITAMO! DMStream PRO JE 100% DOSTUPNA!
+                </h4>
+                <p class="text-slate-200 text-sm sm:text-base mb-4">
+                    Infrastruktura u gradu <span id="resCityName" class="font-extrabold text-amber-300 underline decoration-amber-400/50"></span> je u potpunosti optimizovana u 4K Ultra HD rezoluciji. Ostvarili ste pravo na <strong class="text-white">50% popusta i besplatno testiranje</strong>!
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-3 mt-5">
+                    <a id="resWaBtn" href="#" target="_blank" class="shimmer-btn bg-emerald-500 hover:bg-emerald-400 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm transition transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> ZATRAŽI BESPLATAN TEST
+                    </a>
+                    <a id="resVbBtn" href="#" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm transition transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-viber text-lg"></i> VIBER TEST
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PDF GARANCIJA I POVRAT NOVCA SEKCIJA -->
+    <section class="max-w-5xl mx-auto px-4 mb-16 relative z-10">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-amber-500/30 bg-gradient-to-br from-amber-500/10 via-rose-950/20 to-slate-900/80 shadow-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 min-w-[56px] rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center text-2xl shadow-lg">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Zvanična Pismena PDF Garancija</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Nakon svake kupovine izdajemo potpisani PDF dokument sa tačnim datumom kupovine i rokom trajanja usluge. Potpuno sigurna kupovina!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-white/10 pt-4 md:pt-0 md:pl-6">
+                    <div class="w-14 h-14 min-w-[56px] rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-2xl shadow-lg">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">100% Povrat Novca Bez Pitanja</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Ukoliko se tokom trajanja pretplate pojavi bilo kakav tehnički problem ili ne budete zadovoljni uslugom, vraćamo Vam novac u cijelosti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRZA STATISTIKA -->
+    <section class="max-w-5xl mx-auto px-4 mb-20 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass-card glass-card-hover p-5 rounded-2xl text-center">
+                <div class="text-3xl font-black text-rose-400 mb-1">7.200+</div>
+                <div class="text-xs font-bold text-slate-300 uppercase tracking-wider">Uživo TV Kanala</div>
+                <div class="text-[10px] text-amber-400 mt-1 font-semibold">EX-YU + Svjetski</div>
+            </div>
+            <div class="glass-card glass-card-hover p-5 rounded-2xl text-center">
+                <div class="text-3xl font-black text-cyan-400 mb-1">105.000+</div>
+                <div class="text-xs font-bold text-slate-300 uppercase tracking-wider">Filmova i Serija</div>
+                <div class="text-[10px] text-emerald-400 mt-1 font-semibold">Redovno Ažuriranje</div>
+            </div>
+            <div class="glass-card glass-card-hover p-5 rounded-2xl text-center">
+                <div class="text-3xl font-black text-emerald-400 mb-1">99.9%</div>
+                <div class="text-xs font-bold text-slate-300 uppercase tracking-wider">Anti-Freeze Uptime</div>
+                <div class="text-[10px] text-rose-400 mt-1 font-semibold">Bez Seckanja</div>
+            </div>
+            <div class="glass-card glass-card-hover p-5 rounded-2xl text-center">
+                <div class="text-3xl font-black text-amber-400 mb-1">24/7</div>
+                <div class="text-xs font-bold text-slate-300 uppercase tracking-wider">Tehnička Podrška</div>
+                <div class="text-[10px] text-cyan-400 mt-1 font-semibold">Instalacija 5 Minuta</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZAŠTO IZABRATI DMSTREAM PRO -->
+    <section class="max-w-6xl mx-auto px-4 mb-20 relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-white mb-3">Zašto Je DMStream PRO Izbor Preko 30.000 Korisnika?</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">Nudimo vrhunski kvalitet slike, stabilnost bez baferovanja i potpunu legalnu zaštitu klijenta.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card glass-card-hover p-6 rounded-2xl">
+                <div class="w-12 h-12 bg-rose-500/20 text-rose-400 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Anti-Freeze Serveri</h3>
+                <p class="text-slate-400 text-sm">Gledajte sve sportske mečeve (Arena Sport, SportKlub) u 60 FPS rezoluciji bez ikakvog kašnjenja i seckanja.</p>
+            </div>
+
+            <div class="glass-card glass-card-hover p-6 rounded-2xl">
+                <div class="w-12 h-12 bg-cyan-500/20 text-cyan-400 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Automatsko Ažuriranje Videoteke</h3>
+                <p class="text-slate-400 text-sm">Preko 105.000 holivudskih i domaćih naslova sa prevodom. Najnoviji kino hitovi se dodaju nedeljno.</p>
+            </div>
+
+            <div class="glass-card glass-card-hover p-6 rounded-2xl">
+                <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Sigurnost sa PDF Potvrdom</h3>
+                <p class="text-slate-400 text-sm">Svaki kupac dobija ovjereni PDF ugovor o garanciji sa datumom. Vaša investicija je u potpunosti zaštićena.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CJENOVNIK PAKETA -->
+    <section id="cjenovnik" class="max-w-6xl mx-auto px-4 mb-24 relative z-10">
+        <div class="text-center mb-12">
+            <span class="text-rose-400 font-bold text-xs uppercase tracking-widest bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">Aktivacija Za 5 Minuta</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-2">Izaberite Vaš Paket Uz PDF Garanciju</h2>
+            <p class="text-slate-400 text-sm">Bez ugovorne obaveze. Svi paketi uključuju 100% povrat novca.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+            
+            <!-- 1 Mjesec -->
+            <div class="glass-card glass-card-hover p-6 rounded-3xl flex flex-col justify-between border border-slate-700/50">
+                <div>
+                    <h3 class="text-xl font-extrabold text-white">1 Mjesec</h3>
+                    <p class="text-xs text-slate-400 mb-4">Proba na mjesec dana</p>
+                    <div class="text-4xl font-black text-white mb-4">10€ <span class="text-xs text-slate-400 font-normal">/ mj.</span></div>
+                    <ul class="text-xs text-slate-300 space-y-2.5 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 7.200+ TV Kanala</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 105.000+ Filmova & Serija</li>
+                        <li class="flex items-center gap-2 font-bold text-amber-400"><i class="fa-solid fa-file-pdf"></i> PDF Garancija</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 100% Povrat Novca</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Podrška 24/7</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/38762964867?text=Zdravo,%20želim%20naručiti%20DMStream%20PRO%20paket%201%20mjesec" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs text-center block transition">NARUČI ODMAH</a>
+            </div>
+
+            <!-- 3 Mjeseca -->
+            <div class="glass-card glass-card-hover p-6 rounded-3xl flex flex-col justify-between border border-slate-700/50">
+                <div>
+                    <h3 class="text-xl font-extrabold text-white">3 Mjeseca</h3>
+                    <p class="text-xs text-slate-400 mb-4">Ušteda uz tromjesečje</p>
+                    <div class="text-4xl font-black text-white mb-4">25€ <span class="text-xs text-slate-400 font-normal">/ 3 mj.</span></div>
+                    <ul class="text-xs text-slate-300 space-y-2.5 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 7.200+ TV Kanala</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 105.000+ Filmova & Serija</li>
+                        <li class="flex items-center gap-2 font-bold text-amber-400"><i class="fa-solid fa-file-pdf"></i> PDF Garancija</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 100% Povrat Novca</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Podrška 24/7</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/38762964867?text=Zdravo,%20želim%20naručiti%20DMStream%20PRO%20paket%203%20mjeseca" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs text-center block transition">NARUČI ODMAH</a>
+            </div>
+
+            <!-- 6 Mjeseci -->
+            <div class="glass-card glass-card-hover p-6 rounded-3xl flex flex-col justify-between border border-slate-700/50">
+                <div>
+                    <h3 class="text-xl font-extrabold text-white">6 Mjeseci</h3>
+                    <p class="text-xs text-slate-400 mb-4">Polugodišnja pretplata</p>
+                    <div class="text-4xl font-black text-white mb-4">45€ <span class="text-xs text-slate-400 font-normal">/ 6 mj.</span></div>
+                    <ul class="text-xs text-slate-300 space-y-2.5 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 7.200+ TV Kanala</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 105.000+ Filmova & Serija</li>
+                        <li class="flex items-center gap-2 font-bold text-amber-400"><i class="fa-solid fa-file-pdf"></i> PDF Garancija</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 100% Povrat Novca</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Podrška 24/7</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/38762964867?text=Zdravo,%20želim%20naručiti%20DMStream%20PRO%20paket%206%20mjeseci" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs text-center block transition">NARUČI ODMAH</a>
+            </div>
+
+            <!-- 12 Mjeseci (BESTSELLER) -->
+            <div class="glass-card p-6 rounded-3xl flex flex-col justify-between border-2 border-rose-500 bg-gradient-to-b from-rose-950/30 to-slate-900/90 relative shadow-[0_0_35px_rgba(244,63,94,0.3)] transform md:-translate-y-2">
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-rose-600 to-indigo-600 text-white font-extrabold text-[10px] uppercase px-4 py-1 rounded-full shadow-md tracking-wider">
+                    NAJPRODAVANIJE • 50% POPUST
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-white mt-2">12 Mjeseci</h3>
+                    <p class="text-xs text-rose-300 mb-4">Godišnji komplet sa najvišom uštedom</p>
+                    <div class="text-4xl font-black text-white mb-4">75€ <span class="text-xs text-slate-300 font-normal">/ 12 mj.</span></div>
+                    <ul class="text-xs text-slate-200 space-y-2.5 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> 7.200+ TV Kanala u 4K</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> 105.000+ Filmova & Serija</li>
+                        <li class="flex items-center gap-2 font-extrabold text-amber-300"><i class="fa-solid fa-file-pdf"></i> Pismena PDF Garancija</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> 100% Povrat Novca Bilo Kada</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Prioritetna Podrška 24/7</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/38762964867?text=Zdravo,%20želim%20naručiti%20DMStream%20PRO%20paket%2012%20mjeseci" target="_blank" class="shimmer-btn w-full bg-emerald-500 hover:bg-emerald-400 text-white font-black py-3 rounded-xl text-xs text-center block shadow-lg transition transform hover:scale-105">AKTIVIRAJ UZ GARANCIJU</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PODRŽANI UREĐAJI -->
+    <section class="max-w-5xl mx-auto px-4 mb-24 relative z-10 text-center">
+        <h2 class="text-2xl font-bold text-white mb-8">Gledajte Na Svim Pametnim Uređajima</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+                <i class="fa-solid fa-tv text-3xl text-cyan-400"></i>
+                <span class="text-xs font-bold">Smart TV</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+                <i class="fa-solid fa-box text-3xl text-rose-400"></i>
+                <span class="text-xs font-bold">Android Box</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+                <i class="fa-solid fa-fire text-3xl text-amber-400"></i>
+                <span class="text-xs font-bold">Firestick</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+                <i class="fa-solid fa-mobile-screen text-3xl text-emerald-400"></i>
+                <span class="text-xs font-bold">Telefon / Tablet</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 col-span-2 sm:col-span-1">
+                <i class="fa-solid fa-laptop text-3xl text-indigo-400"></i>
+                <span class="text-xs font-bold">PC / Laptop</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLAJDER UTISAKA I FORMA ZA OSTAVLJANJE KOMENTARA -->
+    <section id="recenzije" class="max-w-4xl mx-auto px-4 mb-24 relative z-10">
+        <div class="text-center mb-10">
+            <span class="text-amber-400 font-bold text-xs uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Iskustva Korisnika</span>
+            <h2 class="text-3xl font-extrabold text-white mt-3 mb-2">Šta Naši Korisnici Kažu o DMStream PRO Usluzi?</h2>
+            <p class="text-slate-400 text-sm">Verifikovani utisci korisnika širom svijeta.</p>
+        </div>
+
+        <!-- SLAJDER KARUSEL -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-rose-500/30 relative mb-8 shadow-2xl">
+            <div id="reviewContent" class="transition-all duration-300">
+                <!-- Dinamički sadržaj u JS-u -->
+            </div>
+
+            <!-- Kontrole slajdera -->
+            <div class="flex items-center justify-between border-t border-slate-700/60 pt-4 mt-6">
+                <button onclick="prevReview()" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition active:scale-95">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <span id="reviewCounter" class="text-xs text-slate-400 font-mono font-bold">1 / 4</span>
+                <button onclick="nextReview()" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition active:scale-95">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- FORMA ZA OSTAVLJANJE UTISKA -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-700">
+            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-pen-to-square text-rose-400"></i> Ostavite Vaš Utisak ili Komentar
+            </h3>
+            <p class="text-slate-400 text-xs mb-6">Vaše iskustvo nam pomaže da budemo još bolji!</p>
+
+            <form id="commentForm" onsubmit="submitComment(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Ime i Prezime / Inicijali</label>
+                        <input type="text" id="comName" placeholder="Npr. Denis M." required class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-rose-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Vaš Grad i Država</label>
+                        <input type="text" id="comCity" placeholder="Npr. Minhen, Njemačka" required class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-rose-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Ocjena Usluge</label>
+                        <select id="comRating" class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-rose-500">
+                            <option value="5">⭐⭐⭐⭐⭐ 5/5 - Izvanredno</option>
+                            <option value="4">⭐⭐⭐⭐ 4/5 - Veoma Dobro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Vaš Utisak / Komentar</label>
+                    <textarea id="comText" rows="3" placeholder="Napišite Vaše utiske o stabilnosti kanala, videoteci i brzini dostave garancije..." required class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-rose-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-rose-600 hover:bg-rose-500 text-white font-bold py-3 rounded-xl text-sm transition shadow-lg">
+                    <i class="fa-solid fa-paper-plane mr-1"></i> Objavi Moj Utisak
+                </button>
+            </form>
+
+            <div id="commentSuccessToast" class="hidden mt-4 bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 p-3 rounded-xl text-xs text-center font-semibold">
+                🎉 Vaš komentar je uspješno objavljen i dodan u slajder iznad! Hvala Vam na povjerenju.
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SEKCIJA -->
+    <section class="max-w-4xl mx-auto px-4 mb-24 relative z-10">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-white mb-2">Često Postavljana Pitanja</h2>
+            <p class="text-slate-400 text-sm">Sve što vas zanima na jednom mjestu.</p>
+        </div>
+
+        <div class="space-y-3">
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center text-sm sm:text-base">
+                    <span><i class="fa-solid fa-circle-question text-rose-400 mr-2"></i> Kako funkcioniše PDF garancija i povrat novca?</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                </button>
+                <div class="px-6 pb-4 text-xs sm:text-sm text-slate-300 hidden">
+                    Nakon završene uplate, poslaćemo Vam zvanični PDF dokument u kojem se nalazi datum kupovine i trajanje pretplate. Ako u bilo kom trenutku budete nezadovoljni uslugom, garantujemo Vam povrat uplaćenog iznosa.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center text-sm sm:text-base">
+                    <span><i class="fa-solid fa-circle-question text-rose-400 mr-2"></i> Da li usluga radi u inostranstvu?</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                </button>
+                <div class="px-6 pb-4 text-xs sm:text-sm text-slate-300 hidden">
+                    Da, DMStream PRO je globalno dostupna usluga. Radimo u Njemačkoj, Austriji, Švajcarskoj, Švedskoj, USA i svim ostalim zemljama svijeta bez ikakvih geografskih blokada.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center text-sm sm:text-base">
+                    <span><i class="fa-solid fa-circle-question text-rose-400 mr-2"></i> Kako da pokrenem besplatni test?</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                </button>
+                <div class="px-6 pb-4 text-xs sm:text-sm text-slate-300 hidden">
+                    Dovoljno je da nam pošaljete poruku na WhatsApp ili Viber (+387 62 964 867). Naš tim će Vam poslati besplatan test nalog u roku od 5 minuta sa jednostavnim uputstvom.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING CONTACT DUGMAD -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <a href="https://wa.me/38762964867?text=Zdravo,%20zanima%20me%20DMStream%20PRO" target="_blank" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-2xl transition transform hover:scale-110">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="viber://chat?number=%2B38762964867" class="w-14 h-14 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center text-2xl shadow-2xl transition transform hover:scale-110">
+            <i class="fa-brands fa-viber"></i>
+        </a>
+    </div>
+
+    <!-- LIVE NOTIFIKACIJA O PRODAJI (POPUP) -->
+    <div id="salesToast" class="fixed bottom-6 left-6 z-50 transform translate-y-20 opacity-0 transition-all duration-500 max-w-xs sm:max-w-sm glass-card border border-emerald-500/40 p-4 rounded-2xl shadow-2xl flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg min-w-[40px]">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div>
+            <div id="toastName" class="text-xs font-bold text-white">Marko iz grada Sarajevo</div>
+            <div id="toastDetail" class="text-[11px] text-emerald-400">Aktivirao/la paket: 12 Mjeseci (prije 2 min)</div>
+        </div>
+    </div>
+
+    <!-- FOOTER (META COMPLIANT) -->
+    <footer class="border-t border-slate-800 bg-slate-950/90 py-10 px-4 text-center text-xs text-slate-500 relative z-10">
+        <p class="mb-3">&copy; 2026 DMStream PRO. Sva prava zadržana. Kontakt / WhatsApp / Viber: +387 62 964 867</p>
+        <div class="max-w-3xl mx-auto text-[11px] leading-relaxed text-slate-600">
+            <strong>Meta Ads Disclaimer:</strong> Ova web stranica NIJE dio Facebook, Instagram ili Meta Platforms, Inc. sajta. Nadalje, ova stranica NIJE na bilo koji način podržana od strane Meta-e. FACEBOOK i INSTAGRAM su zaštitni znakovi kompanije Meta Platforms, Inc. DMStream PRO nudi isključivo vlastite licencirane i legalne usluge u skladu sa zakonima.
+        </div>
+    </footer>
+
+    <script>
+        // 1. BROJAČ ODBROJAVANJA (COUNTDOWN)
+        let timerSeconds = 3 * 3600 + 45 * 60 + 12;
+        setInterval(() => {
+            if (timerSeconds > 0) timerSeconds--;
+            let h = Math.floor(timerSeconds / 3600);
+            let m = Math.floor((timerSeconds % 3600) / 60);
+            let s = timerSeconds % 60;
+            document.getElementById('countdownTimer').innerText = 
+                `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+        }, 1000);
+
+        // 2. INTERAKTIVNA PROVJERA DOSTUPNOSTI PO GRADU
+        function startCityCheck() {
+            const city = document.getElementById('cityInput').value.trim();
+            if(!city) {
+                document.getElementById('cityInput').focus();
+                document.getElementById('cityInput').classList.add('border-red-500');
+                return;
+            }
+            document.getElementById('cityInput').classList.remove('border-red-500');
+
+            document.getElementById('checkForm').classList.add('hidden');
+            const scanningBox = document.getElementById('scanningBox');
+            scanningBox.classList.remove('hidden');
+
+            let progress = 0;
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+            const scanStatusText = document.getElementById('scanStatusText');
+
+            const statusSteps = [
+                `Inicijalizacija sigurne linije za grad ${city}...`,
+                `Skeniranje mrežnih čvorišta u regiji ${city}...`,
+                `Optimizacija Anti-Freeze 4K CDN servera...`,
+                `Priprema besplatnog probnog naloga za grad ${city}...`
+            ];
+
+            const interval = setInterval(() => {
+                progress += 2;
+                progressFill.style.width = progress + '%';
+                progressPercent.innerText = progress + '%';
+
+                if (progress === 20) scanStatusText.innerText = statusSteps[1];
+                if (progress === 55) scanStatusText.innerText = statusSteps[2];
+                if (progress === 85) scanStatusText.innerText = statusSteps[3];
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        scanningBox.classList.add('hidden');
+                        const resultBox = document.getElementById('resultBox');
+                        document.getElementById('resCityName').innerText = city;
+
+                        // Postavljanje linkova sa gradom i novim brojem
+                        const msg = encodeURIComponent(`Zdravo, provjerio sam dostupnost za grad ${city} i želim besplatan test i 50% popusta za DMStream PRO!`);
+                        document.getElementById('resWaBtn').href = `https://wa.me/38762964867?text=${msg}`;
+                        document.getElementById('resVbBtn').href = `viber://chat?number=%2B38762964867`;
+
+                        resultBox.classList.remove('hidden');
+                    }, 400);
+                }
+            }, 100);
+        }
+
+        // 3. SLAJDER RECENZIJA I DODAVANJE KOMENTARA
+        let reviews = [
+            { name: "Damir M.", city: "Sarajevo", stars: 5, date: "Prije 2 dana", text: "Koristim DMStream PRO već 6 mjeseci u Njemačkoj. Nikad nijedan kanal nije zatrazao, Arena Sport u 60fps perfektna. Dobio sam i PDF garanciju sutradan!" },
+            { name: "Marko K.", city: "Zagreb", stars: 5, date: "Prije 3 dana", text: "Prezadovoljan sam! Videoteka je ogromna, svi filmovi imaju prevod. Testirao besplatno 24h pa odma uzeo 12 mjeseci paket." },
+            { name: "Stefan P.", city: "Beč (Wien)", stars: 5, date: "Prije 5 dana", text: "Top usluga! Podrška mi je pomogla oko instalacije na Firestick za 5 minuta. Svaka čast za profesionalnost i garanciju povrata novca." },
+            { name: "Emina S.", city: "Frankfurt", stars: 5, date: "Prije 1 sedmicu", text: "Aktivirala za roditelje. Sve radi savršeno, EX-YU kanali čisti 4K. Svaka preporuka za DMStream PRO ekipu!" }
+        ];
+        let currentReviewIndex = 0;
+
+        function renderReview(index) {
+            const r = reviews[index];
+            let starsHtml = '';
+            for(let i=0; i<r.stars; i++) starsHtml += '<i class="fa-solid fa-star text-amber-400 text-xs"></i>';
+
+            document.getElementById('reviewContent').innerHTML = `
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-rose-600/30 border border-rose-500/50 flex items-center justify-center font-bold text-rose-300 text-lg">
+                            ${r.name.charAt(0)}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">${r.name}</h4>
+                            <p class="text-xs text-emerald-400 flex items-center gap-1 font-semibold">
+                                <i class="fa-solid fa-circle-check"></i> Verifikovani Korisnik (${r.city})
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="flex gap-0.5 mb-1">${starsHtml}</div>
+                        <span class="text-[11px] text-slate-400">${r.date}</span>
+                    </div>
+                </div>
+                <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">"${r.text}"</p>
+            `;
+            document.getElementById('reviewCounter').innerText = `${index + 1} / ${reviews.length}`;
+        }
+
+        function nextReview() {
+            currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+            renderReview(currentReviewIndex);
+        }
+        function prevReview() {
+            currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+            renderReview(currentReviewIndex);
+        }
+
+        function submitComment(e) {
+            e.preventDefault();
+            const name = document.getElementById('comName').value.trim();
+            const city = document.getElementById('comCity').value.trim();
+            const stars = parseInt(document.getElementById('comRating').value);
+            const text = document.getElementById('comText').value.trim();
+
+            if(!name || !city || !text) return;
+
+            reviews.unshift({ name, city, stars, date: "Upravo sad", text });
+            currentReviewIndex = 0;
+            renderReview(0);
+
+            document.getElementById('commentForm').reset();
+            const toast = document.getElementById('commentSuccessToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 5000);
+        }
+
+        // Inicijalizacija prvog komentara
+        renderReview(0);
+        // Automatska rotacija na svakih 7 sekundi
+        setInterval(nextReview, 7000);
+
+        // 4. LIVE NOTIFIKACIJE O PRODAJI
+        const salesData = [
+            { name: "Almedin", city: "Tuzla", package: "12 Mjeseci", time: "prije 2 min" },
+            { name: "Goran", city: "Beograd", package: "6 Mjeseci", time: "prije 5 min" },
+            { name: "Josip", city: "Split", package: "12 Mjeseci", time: "prije 1 min" },
+            { name: "Elvir", city: "München", package: "3 Mjeseca", time: "prije 8 min" },
+            { name: "Sanjin", city: "Ljubljana", package: "12 Mjeseci", time: "prije 4 min" }
+        ];
+        let salesIdx = 0;
+
+        function showNextSale() {
+            const s = salesData[salesIdx];
+            salesIdx = (salesIdx + 1) % salesData.length;
+
+            const toast = document.getElementById('salesToast');
+            document.getElementById('toastName').innerText = `${s.name} iz grada ${s.city}`;
+            document.getElementById('toastDetail').innerText = `Aktivirao/la paket: ${s.package} (${s.time})`;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4500);
+        }
+        setInterval(showNextSale, 12000);
+        setTimeout(showNextSale, 3000);
+
+        // 5. FAQ ACCORDION TOGGLE
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.fa-chevron-down');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
